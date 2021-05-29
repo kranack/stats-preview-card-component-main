@@ -55,18 +55,13 @@ body {
   align-self: self-end;
   margin-bottom: 5px;
 }
-.card .card-image,
-.card .card-image .image-layer {
-  border-radius: 0 5px 5px 0;
-}
 .card .card-image {
   background-image: url("../../images/image-header-desktop.jpg");
+  background-color: #aa5cdb;
+  background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.card .card-image .image-layer {
-  background-color: rgba(170, 92, 219, 0.7);
-  height: 100%;
+  border-radius: 0 5px 5px 0;
 }
 
 .attribution {
@@ -93,13 +88,10 @@ body {
 .card .card-stats {
     text-align: center;
   }
-  .card .card-image,
-.card .card-image .image-layer {
-    border-radius: 5px 5px 0 0;
-  }
   .card .card-image {
     order: -1;
     background-image: url("../../images/image-header-mobile.jpg");
+    border-radius: 5px 5px 0 0;
   }
   .card .card-stats {
     grid-template: 1fr 1fr 1fr/1fr;
