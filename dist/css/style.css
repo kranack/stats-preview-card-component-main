@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+body {
+  display: grid;
+  grid-template: 1fr 50px/1fr;
+  height: 100vh;
+  background-color: #090b1a;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+  background-color: #1b1938;
+  color: white;
+  border-radius: 5px;
+  margin: 15px;
+  width: 70vw;
+  align-self: center;
+  justify-self: center;
+  min-height: 400px;
+}
+.card .card-description {
+  display: grid;
+  margin: 50px;
+}
+.card .card-heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+.card .card-heading .accent {
+  color: #aa5cdb;
+}
+.card .card-text {
+  color: rgba(255, 255, 255, 0.75);
+}
+.card .card-stats {
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr;
+}
+.card .card-stats > p {
+  display: grid;
+  grid-template: 50px 1fr/1fr;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+}
+.card .card-stats > p > span {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  align-self: self-end;
+  margin-bottom: 5px;
+}
+.card .card-image,
+.card .card-image .image-layer {
+  border-radius: 0 5px 5px 0;
+}
+.card .card-image {
+  background-image: url("../../images/image-header-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card .card-image .image-layer {
+  background-color: rgba(170, 92, 219, 0.7);
+  height: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 800px) {
+  .card {
+    grid-template: 250px 1fr/1fr;
+    min-heigh: 0px;
+    width: auto;
+    height: auto;
+  }
+  .card .card-heading {
+    font-size: 24px;
+  }
+  .card .card-heading,
+.card .card-text,
+.card .card-stats {
+    text-align: center;
+  }
+  .card .card-image,
+.card .card-image .image-layer {
+    border-radius: 5px 5px 0 0;
+  }
+  .card .card-image {
+    order: -1;
+    background-image: url("../../images/image-header-mobile.jpg");
+  }
+  .card .card-stats {
+    grid-template: 1fr 1fr 1fr/1fr;
+  }
+  .card .card-stats > p {
+    grid-template: 25px 1fr/1fr;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

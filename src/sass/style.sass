@@ -1,0 +1,115 @@
+// Includes
+@import 'vars'
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap')
+
+body
+	display: grid
+	grid-template: 1fr 50px / 1fr
+	height: 100vh
+
+	background-color: hsl(233, 47%, 7%)
+	font-size: 15px
+	font-family: 'Inter', sans-serif
+	font-weight: 400
+	
+// Card
+.card
+	display: grid
+	grid-template: 1fr / 1fr 1fr
+	background-color: hsl(244, 38%, 16%)
+	color: hsl(0, 0%, 100%)
+	border-radius: 5px
+	margin: 15px
+	width: 70vw
+	align-self: center
+	justify-self: center
+	min-height: 400px
+
+	.card-description
+		display: grid
+		margin: 50px
+
+	.card-heading
+		font-family: 'Inter', sans-serif
+		font-weight: 700
+		font-size: 32px
+
+		.accent
+			color: hsl(277, 64%, 61%)
+
+	.card-text
+		color: hsla(0, 0%, 100%, 0.75)
+
+	.card-stats
+		display: grid
+		grid-template: 1fr / 1fr 1fr 1fr
+
+		> p
+			display: grid
+			grid-template: 50px 1fr / 1fr
+			text-transform: uppercase
+			color: hsla(0, 0%, 100%, 0.6)
+			font-size: 12px
+
+			> span
+				color: hsl(0, 0%, 100%)
+				font-weight: 700
+				font-size: 20px
+				align-self: self-end
+				margin-bottom: 5px
+
+	.card-image,
+	.card-image .image-layer
+		border-radius: 0 5px 5px 0
+
+	.card-image
+		background-image: url('../../images/image-header-desktop.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+
+		.image-layer
+			background-color: hsla(277, 64%, 61%, 0.7)
+			height: 100%
+
+// Attribution
+.attribution
+	font-size: 11px
+	text-align: center
+	color: hsl(0, 0%, 100%)
+
+	a
+		color: hsl(228, 45%, 44%)
+	
+// Phone
+
+@media (max-width: $breakpoint-mobile) 
+	.card
+		grid-template: 250px 1fr / 1fr
+		min-heigh: 0px
+		width: auto
+		height: auto
+
+		.card-heading
+			font-size: 24px
+
+		.card-heading,
+		.card-text,
+		.card-stats
+			text-align: center
+
+		.card-image,
+		.card-image .image-layer
+			border-radius: 5px 5px 0 0
+
+		.card-image
+			order: -1
+			background-image: url('../../images/image-header-mobile.jpg')
+
+		.card-stats
+			grid-template: 1fr 1fr 1fr / 1fr
+
+			> p
+				grid-template: 25px 1fr / 1fr
